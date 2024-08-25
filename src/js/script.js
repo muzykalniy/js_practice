@@ -39,3 +39,30 @@ const numberBig = function (num3, num4) {
 };
 const result3 = numberBig(numInput3, numInput4);
 console.log(result3);
+
+/* Оценка по баллам
+Напиши программу, которая принимает на вход число (от 0 до 100) и
+выводит оценку по следующим критериям:
+90-100: Отлично
+75-89: Хорошо
+50-74: Удовлетворительно
+0-49: Неудовлетворительно */
+
+const numInput5 = prompt('Enter a number from 0 to 100:'); // Не приводим к числу сразу
+
+const note = function (num5) {
+  // Проверяем, не пустое ли значение, является ли оно числом и находится ли в пределах от 0 до 100
+  if (num5 !== null && num5.trim() !== '' && !isNaN(num5)) {
+    num5 = +num5; // Приводим строку к числу только после проверок
+    if (num5 >= 0 && num5 <= 100) {
+      if (num5 >= 90 && num5 <= 100) { return 'Perfect'; }
+      if (num5 >= 75 && num5 <= 89) { return 'Good'; }
+      if (num5 >= 50 && num5 <= 74) { return 'Not bad'; }
+      return 'Bad';
+    }
+  }
+  return 'error';
+};
+
+const result4 = note(numInput5);
+console.log(result4);
