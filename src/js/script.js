@@ -66,3 +66,36 @@ const note = function (num5) {
 
 const result4 = note(numInput5);
 console.log(result4);
+
+/* Простой калькулятор
+Напиши программу, которая принимает два числа и оператор (+, -, *, /),
+а затем возвращает результат выполнения этого оператора над этими числами. */
+const numInput6 = prompt('Enter a first number:');
+const numInput7 = prompt('Enter a second number:');
+const operatorInput = prompt('Enter an operator:');
+
+const calculator = function (num6, num7) {
+  if ((num6 !== null && num6.trim() !== '' && !isNaN(num6))
+      && (num7 !== null && num7.trim() !== '' && !isNaN(num7)) && operatorInput.trim() !== '') {
+    num6 = +num6;
+    num7 = +num7;
+    if (operatorInput === '+') {
+      return num6 + num7;
+    }
+    if (operatorInput === '-') {
+      return num6 - num7;
+    }
+    if (operatorInput === '*') {
+      return num6 * num7;
+    }
+    if (operatorInput === '/') {
+      if (num7 === 0) {
+        return 'you cannot divide by 0';
+      }
+      return num6 / num7;
+    }
+  }
+  return 'error';
+};
+const result5 = calculator(numInput6, numInput7);
+console.log(result5);
