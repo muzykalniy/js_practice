@@ -12,5 +12,3 @@ doSomething(5, (result) => {
 });
 
 // 2
-
-
