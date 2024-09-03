@@ -50,6 +50,5 @@ function filterArray(arr, callback) {
   }
   return newArr;
 }
-
 const result = filterArray([1, 2, 3, 4, 5], (item) => item > 3);
 console.log(result); // Должно вывести: [4, 5]
